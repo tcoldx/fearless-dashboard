@@ -5,7 +5,33 @@
 }
 
 .App {
-  display: flex;
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 13rem auto 23rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.nonbold {
+  font-weight: 100;
+  color: gray;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .App-logo {
