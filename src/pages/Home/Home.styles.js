@@ -9,19 +9,22 @@ export const ContainerWrap = styled.div`
 
 export const Container = styled.div`
   display: flex;
+  width: 80vw;
 `;
 
 export const InsightContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
+
   & > div {
-    padding: 1.8rem;
+    padding: 1rem;
     margin-top: 1rem;
     background: #ffffff;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
     border-radius: 10px;
     transition: all 300ms ease;
+    height: 140px;
 
     &:hover {
       box-shadow: none;
@@ -38,13 +41,14 @@ export const InsightContainer = styled.div`
 `;
 
 export const SideInsightContainer = styled.div`
-display: grid;
-  grid-template-row: repeat(4, 1fr);
-width: 300px;
+display: flex;
+justify-content: space-between;
+width: 100%;
 
   & > div {
+    width: 17.5rem;
     height: 120px;
-    margin-top: 2.2rem;
+    margin-top: 1rem;
     background: #ffffff;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
     border-radius: 10px;
@@ -78,8 +82,8 @@ export const Right = styled.div`
 
 export const ChartContainer = styled.div`
   margin-top: 1.2rem;
-  width: 850px;
-  height: 20rem;
+  width: 100%;
+  height: 23rem;
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
@@ -111,8 +115,6 @@ export const ChartWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 96.4%;
-  height: 400px;
   border-radius: 8px;
   background: #ebf4f4;
   box-shadow: 20px 20px 60px #c8cfcf, -20px -20px 60px #ffffff;

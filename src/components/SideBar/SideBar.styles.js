@@ -3,7 +3,38 @@ import { Link } from "react-router-dom";
 
 export const SidebarContainer = styled.aside`
   height: 100vh;
+  background: #edf0f6;
   &.bold {
+    font-weight: bold;
+  }
+`;
+
+export const Stats = styled.div`
+  display: flex;
+  width: 80%;
+  margin-top: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+`;
+
+export const StatLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid gray;
+
+  & .number {
+    font-size: 16px;
+    font-weight: bold;
+  }
+`;
+
+export const StatRight = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  & .number {
+    font-size: 16px;
     font-weight: bold;
   }
 `;
@@ -11,19 +42,20 @@ export const SidebarContainer = styled.aside`
 export const SidebarItems = styled.div`
   display: flex;
   flex-direction: column;
-  height: 96vh;
   position: relative;
   margin-top: 30px;
+  height: 420px;
 
   & a {
     display: flex;
-    gap: 1rem;
-    margin-left: 2rem;
-    height: 2.7rem;
+    height: 3.7rem;
     align-items: center;
+    gap: 1rem;
+    position: relative;
   }
 
   & a span {
+    margin-left: 10px;
     color: lightblue;
   }
 
@@ -31,10 +63,8 @@ export const SidebarItems = styled.div`
     font-size: 14px;
   }
 
-  & a:last-child {
-    position: absolute;
-    bottom: 1rem;
-    width: 80%;
+  & .nonbold {
+    margin-left: 1.5rem;
   }
 `;
 
@@ -42,21 +72,37 @@ export const Message = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: blue;
-  border-radius: 10px;
-  font-size: 13.5px;
-  background: lightblue;
-  width: 2rem;
+  color: red;
+  background: #f2dbde;
+  border-radius: 8px;
+  font-size: 11px;
+  padding: 2px 10px;
 `;
 
 export const A = styled.a`
   display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  &:hover:before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: blue;
+    transition: all 300ms ease;
+  }
 
   &:hover {
-    border-radius: 5px;
+    height: 3rem;
+    width: 94%;
     background: #ffffff;
-    box-shadow: inset 5px 5px 10px #dbdbdb, inset -5px -5px 10px #ffffff;
-    transition: all 600ms ease;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    & .nonbold {
+      color: #5595f3;
+    }
   }
 
   & .arrow {
@@ -142,14 +188,22 @@ export const NavBottomContainer = styled.div`
 
 export const Img = styled.img`
   border-radius: 100%;
-  width: 70px;
-  height: 70px;
-  margin-bottom: 10px;
+`;
+
+export const ImageWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
 `;
 
 export const NameWrap = styled.div`
   font-size: 11px;
   font-weight: bold;
+  margin-top: 7px;
 `;
 
 export const EmailWrap = styled.div`
@@ -159,20 +213,52 @@ export const EmailWrap = styled.div`
   margin-top: 5px;
 `;
 
-export const PlanWrap = styled.div`
-  font-weight: bold;
-  color: lightblue;
-  font-size: 14px;
-  margin-top: 5px;
-`;
-
 export const UpgradeButton = styled.button`
   border: none;
   color: white;
-  background: lightblue;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 8px;
+  background: #0db46e;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 9px 8px;
+  border-radius: 6px;
   font-weight: bold;
+  font-size: 11px;
   cursor: pointer;
+`;
+
+export const Plan = styled.div`
+  font-size: 12px;
+  margin-bottom: 3px;
+  width: 80%;
+  font-weight: bold;
+`;
+
+export const SidebarFooter = styled.div`
+  display: flex;
+  background: #e8f0f7;
+  flex-direction: column;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const UsageWrap = styled.div`
+  width: 80%;
+  background: #b8e8e1;
+  border-radius: 6px;
+  height: 4px;
+`;
+
+export const ProgressBar = styled.div`
+  background: #37aa81;
+  border-radius: 6px;
+  height: 4px;
+  width: 50%;
+`;
+
+export const PlanWrap = styled.div`
+  font-weight: bold;
+  color: #53b894;
+  margin-top: 8px;
+  font-size: 11px;
 `;
