@@ -61,11 +61,7 @@ const DashboardChart = (props) => {
       },
     },
   };
-  return (
-    <Container>
-      <Bar width={"100%"} height={35} data={data} options={options} />
-    </Container>
-  );
+  return <Container></Container>;
 };
 
 export default DashboardChart;

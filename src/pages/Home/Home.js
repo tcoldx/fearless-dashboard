@@ -10,6 +10,8 @@ import {
   TopLeft,
   Right,
   SideInsightContainer,
+  FooterContentContainer,
+  FooterWrap,
 } from "./Home.styles";
 
 const Home = () => {
@@ -68,8 +70,7 @@ const Home = () => {
           <DashboardChart />
         </ChartContainer>
         {/* end of table*/}
-      </ContainerWrap>
-      <Right>
+
         <SideInsightContainer>
           <div className="sales">
             <span className="material-icons">supervisor_account</span>
@@ -115,7 +116,7 @@ const Home = () => {
             <small>Ads Click Rate</small>
           </div>
         </SideInsightContainer>
-      </Right>
+      </ContainerWrap>
     </Container>
   );
 };

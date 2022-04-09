@@ -1,8 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Profile from "assets/images/profileImg.png";
 import { BsChevronRight } from "react-icons/bs";
 
-import { SidebarContainer, Message, SidebarItems, A } from "./SideBar.styles";
+import {
+  SidebarContainer,
+  Message,
+  SidebarItems,
+  A,
+  SidebarFooter,
+  Img,
+  NameWrap,
+  EmailWrap,
+  UpgradeButton,
+  UsageWrap,
+  ProgressBar,
+  PlanWrap,
+  Stats,
+  StatRight,
+  StatLeft,
+  ImageWrap,
+  Plan,
+} from "./SideBar.styles";
 
 const NavContent = (props) => {
   const [hovering, setHovering] = useState(false);
@@ -22,7 +40,7 @@ const NavContent = (props) => {
     <A href="#" onMouseLeave={handleLeave} onMouseEnter={handleHover}>
       <span class="material-icons">{props.icon}</span>
       <h3 className={props.bold ? "bold" : "nonbold"}>{props.name}</h3>
-      <Message>{props.amount}</Message>
+      {props.amount && <Message>{props.amount}</Message>}
       {hovering && <BsChevronRight className="arrow" />}
     </A>
   );
@@ -49,6 +67,31 @@ const SideBar = () => {
         />
         <NavContent name="Logout" icon="power_settings_new" bold={true} />
       </SidebarItems>
+      {/*end of top sidebar*/}
+
+      <SidebarFooter>
+        <ImageWrap>
+          <Img width="80" height="80" src={Profile} alt="img" />
+        </ImageWrap>
+        <NameWrap>Tredis Ingram</NameWrap>
+        <EmailWrap>T.tredis@gmail.com</EmailWrap>
+        <PlanWrap>Your Plan: Standard</PlanWrap>
+        <UpgradeButton>Upgrade Your Plan</UpgradeButton>
+        <Plan>Plan Uses</Plan>
+        <UsageWrap>
+          <ProgressBar />
+        </UsageWrap>
+        <Stats>
+          <StatLeft>
+            <span className="number">2,450</span>
+            <span>Clicks Reviewed</span>
+          </StatLeft>
+          <StatRight>
+            <span className="number">5000</span>
+            <span>Monthly Clicks</span>
+          </StatRight>
+        </Stats>
+      </SidebarFooter>
     </SidebarContainer>
   );
 };
