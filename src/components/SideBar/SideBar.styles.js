@@ -4,8 +4,13 @@ import { Link } from "react-router-dom";
 export const SidebarContainer = styled.aside`
   height: 100vh;
   background: #edf0f6;
-  &.bold {
+  & .bold {
     font-weight: bold;
+    font-size: 13.8px;
+  }
+
+  & .nonbold {
+    font-size: 12.5px;
   }
 `;
 
@@ -114,11 +119,13 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+
   &:hover {
     border-radius: 5px;
     background: #ffffff;
     box-shadow: inset 5px 5px 10px #dbdbdb, inset -5px -5px 10px #ffffff;
   }
+
   &:hover .hide {
     color: red;
   }
@@ -129,7 +136,6 @@ export const NavWrap = styled.div`
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  font-size: 13px;
 `;
 
 export const StatsSelect = styled.div`
@@ -155,6 +161,7 @@ export const Header = styled.div`
   justify-content: space-between;
   width: 75%;
   height: 3.7rem;
+
   &:hover {
     border-radius: 5px;
     background: #ffffff;

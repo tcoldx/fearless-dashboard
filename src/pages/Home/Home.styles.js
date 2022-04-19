@@ -17,6 +17,18 @@ export const InsightContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
 
+  & .sales {
+    display: flex;
+  }
+
+  & .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 10%;
+  }
+
   & > div {
     padding: 1rem;
     margin-top: 1rem;
@@ -30,12 +42,28 @@ export const InsightContainer = styled.div`
       box-shadow: none;
     }
 
+    & h3 {
+      font-size: 12px;
+    }
+
     & span {
       color: #4e91f6;
-      font-size: 80px;
+      font-size: 60px;
+      margin-top: 10px;
       padding: 10px 10px;
       background: #f2f5ff;
+      height: 80px;
       border-radius: 100%;
+    }
+
+    & small {
+      color: grey;
+    }
+
+    & .details {
+      color: blue;
+      cursor: pointer;
+      font-size: 12px;
     }
   }
 `;
@@ -44,6 +72,20 @@ export const SideInsightContainer = styled.div`
 display: flex;
 justify-content: space-between;
 width: 100%;
+
+  & .sales {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  & .middle {
+    margin-left: 10px;
+  }
+
+  & small {
+    color: grey;
+  }
 
   & > div {
     width: 17.5rem;
@@ -62,8 +104,11 @@ width: 100%;
       font-size: 50px;
       color: #4e91f6;
       background: #f2f5ff;
+      padding: 10px 10px;
+      height: 70px;
       border-radius: 100%;
     }
+
 & .content {
   font-size: 18px;  
 }
@@ -83,6 +128,8 @@ export const Right = styled.div`
 export const ChartContainer = styled.div`
   margin-top: 1.2rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
   height: 23rem;
   border-radius: 8px;
   background: #ffffff;

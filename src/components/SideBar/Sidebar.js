@@ -50,7 +50,7 @@ const SideBar = () => {
   return (
     <SidebarContainer>
       <SidebarItems>
-        <NavContent name="Mysite.com" icon="language" bold={true} />
+        <NavContent name="Fearless.com" icon="language" bold={true} />
         <NavContent name="Analytics" icon="assessment" bold={true} />
         <NavContent name="Dashboard" />
         <NavContent name="Stats" />
