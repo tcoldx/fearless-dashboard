@@ -36,7 +36,7 @@ const DashboardChart = (props) => {
       },
       layout: {
         padding: 15,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
       },
     },
     scales: {
@@ -61,7 +61,11 @@ const DashboardChart = (props) => {
       },
     },
   };
-  return <Container></Container>;
+  return (
+    <Container>
+      <Bar height={100} data={data} options={options} />
+    </Container>
+  );
 };
 
 export default DashboardChart;
